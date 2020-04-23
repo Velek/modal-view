@@ -69,13 +69,13 @@ public struct ModalLink<Label, Destination> : View where Label : View, Destinati
             case let .view(view):
                 return view
             case let .builder(build):
-                return self.view
+                return AnyView(build { self.dismissModalView() })
             }
         }())
     }
     
     private func dismissModalView() {
-        modalView.content = nil
+//        modalView.content = nil
     }
 }
 
