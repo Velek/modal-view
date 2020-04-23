@@ -69,7 +69,7 @@ public struct ModalLink<Label, Destination> : View where Label : View, Destinati
             case let .view(view):
                 return view
             case let .builder(build):
-                return view
+                return self.view
             }
         }())
     }
