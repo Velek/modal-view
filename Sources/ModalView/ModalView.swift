@@ -64,14 +64,14 @@ public struct ModalLink<Label, Destination> : View where Label : View, Destinati
     }
     
     private func presentModalView() {
-        modalView.content = Pipe.Content(view: {
-            switch destinationProvider {
-            case let .view(view):
+ //       modalView.content = Pipe.Content(view: {
+ //           switch destinationProvider {
+ //           case let .view(view):
                 return view
-            case let .builder(build):
-                return AnyView(build { self.dismissModalView() })
-            }
-        }())
+//            case let .builder(build):
+//                return AnyView(build { self.dismissModalView() })
+//            }
+//        }())
     }
     
     private func dismissModalView() {
